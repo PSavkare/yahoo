@@ -1,0 +1,3 @@
+services:
+ custom_view.say_hello:
+   class: Drupal\custom_view\HelloServices

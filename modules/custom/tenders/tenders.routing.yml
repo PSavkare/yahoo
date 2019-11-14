@@ -1,0 +1,14 @@
+tenders.admin_tender:
+  path: '/admin/tenders-content'
+  defaults:
+    _controller: '\Drupal\tenders\Controller\TendersController:admin_tender'
+    _title: 'Admin Tender Content'
+  requirements:
+    _permission: 'access content'
+tenders.tenders_display:
+  path: '/tenders-content'
+  defaults:
+    _controller: '\Drupal\tenders\Controller\TendersController:tenders_display'
+    _title: 'Tender Content'
+  requirements:
+    _permission: 'access content'

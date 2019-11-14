@@ -1,0 +1,7 @@
+import_node.import_node:
+  path: '/node/import'
+  defaults:
+    _controller: '\Drupal\import_node\Controller\NodeimportController:import_node'
+    _title: 'Node'
+  requirements:
+    _permission: 'access content'

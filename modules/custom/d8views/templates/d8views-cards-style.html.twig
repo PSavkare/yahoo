@@ -1,0 +1,23 @@
+{%
+  set classes = [
+    'views-view-tardis',
+    options.classes
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <ul>
+    {% for key, item in options.time_pool %}
+      {% if options.nesting == 1 %}
+        <li><a href="/{{ options.path }}/{{ key }}">{{ key }}</a><ul>
+        {% for subkey, subitem in item %}
+          <li><a href="/{{ options.path }}/{{ key }}/{{ subkey }}">{{ subitem }}</a></li>
+        {% endfor %}
+        </ul></li>
+      {% else %}
+        {% for subkey, subitem in item %}
+          <li><a href="/{{ options.path }}/{{ key }}/{{ subkey }}">{{ subitem }}</a></li>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

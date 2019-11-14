@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function demo_view_theme() {
+  $theme['views_view_fields__demo_view__show_view'] = [
+    'template' => 'views-view-fields--demo-view--show-view',
+    'variables'
+  ];
+	
+  return $theme;
+}

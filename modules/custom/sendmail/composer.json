@@ -1,0 +1,14 @@
+{
+  "name": "drupal/sendmail",
+  "type": "drupal-module",
+  "description": "Send MAil Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/sendmail",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/sendmail",
+    "source": "http://cgit.drupalcode.org/sendmail"
+  },
+  "require": { }
+}

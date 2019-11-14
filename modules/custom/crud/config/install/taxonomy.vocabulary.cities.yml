@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - crud
+name: cities
+vid: cities
+description: 'Stores cities for crud'
+hierarchy: 0
+weight: 0

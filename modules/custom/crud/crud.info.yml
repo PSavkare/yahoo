@@ -1,0 +1,5 @@
+name: CRUD
+type: module
+description: A Module is used to perform CRUD operations on entities.
+package: Custom
+core: 8.x

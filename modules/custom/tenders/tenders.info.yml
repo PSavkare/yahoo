@@ -1,0 +1,5 @@
+name: Tenders
+type: module
+description: A Tenders content related features.
+package: Custom Modules
+core: 8.x

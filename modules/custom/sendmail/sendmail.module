@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains sendmail.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function sendmail_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sendmail module.
+    case 'help.page.sendmail':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Send Mail Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+function sendmail_mail($key, &$message, $params) {
+
+  // E-mail formatting will be exactly as below, so do not use indenting!
+  $body = //Dummy Text
+"Hi,
+
+I'm just showing off my work ... 
+Works nicely huh?
+Should probably add a password here somewhere?
+
+See ya! ".
+
+"Message :".$params['message'];
+$message['subject']=$params['subject'];
+$message['attachments']=$params['attachments'];
+$message['headers'] = $params['headers'];
+$message['body'][] = Drupal\Core\Mail\MailFormatHelper::htmlToText($body);
+}

@@ -1,0 +1,75 @@
+crud.create_new_node:
+  path: '/node-create'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:create_new_node'
+    _title: 'CRUD Operations: New Node'
+  requirements:
+    _permission: 'access content'
+crud.delete_new_node:
+  path: '/node-delete/{node}'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:delete_single_node'
+    _title: 'CRUD Operations: Deleted Node'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node:
+        type: entity:node
+crud.update_current_node:
+  path: '/node-update/{node}'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:update_current_node'
+    _title: 'CRUD Operations: Update Current Node'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node:
+        type: entity:node
+crud.create_user:
+  path: '/user-create'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:create_user'
+    _title: 'CRUD Operations: New User'
+  requirements:
+    _permission: 'access content'
+crud.update_user:
+  path: '/user-update/{user}'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:update_user'
+    _title: 'CRUD Operations: Deleted User'
+  requirements:
+    _permission: 'access content'
+    user: \d+
+crud.delete_user_account:
+  path: '/user-delete/{user}'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:delete_user_account'
+    _title: 'CRUD Operations: Deleted User'
+  requirements:
+    _permission: 'access content'
+    user: \d+
+crud.add_taxonomy_term:
+  path: '/term-add'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:add_taxonomy_term'
+    _title: 'CRUD Operations: Taxonomy term Creation'
+  requirements:
+    _permission: 'access content'
+crud.update_taxonomy_term:
+  path: '/tax-update/{tid}'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:update_taxonomy_term'
+    _title: 'CRUD Operations: Taxonomy term Updation'
+  requirements:
+    _permission: 'access content'
+    taxonomy_term: \d+
+crud.delete_taxonomy_term:
+  path: '/tax-delete/{tid}'
+  defaults:
+    _controller: '\Drupal\crud\Controller\CrudController:delete_taxonomy_term'
+    _title: 'CRUD Operations: Taxonomy term Deletion'
+  requirements:
+    _permission: 'access content'
+    taxonomy_term: \d+

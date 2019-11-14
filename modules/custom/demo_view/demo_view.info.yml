@@ -1,0 +1,5 @@
+name: Demo View
+type: module
+description: A Module is used to create custom view with templates.
+package: Custom
+core: 8.x

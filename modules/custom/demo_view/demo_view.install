@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * @file
+ * Install, schema, and uninstall functions for the Demo View module.
+ */
+
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Implements hook_install().
+ */
+function demo_view_install() {
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function demo_view_uninstall() {
+
+}
+
+/**
+ * Implements hook_schema().
+ */
+function demo_view_schema() {
+ $schema['demo_view_table'] = [
+    // Example (partial) specification for table "node".
+    'description' => 'The base table for demo_view.',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier for a node.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'The name of Student.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'age' => [
+        'description' => 'The age of Student.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'is_active' => [
+        'description' => 'The activity of Student.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'project_code' => [
+        'description' => 'The project code of Student.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+
+    'unique keys' => [
+      'id' => ['id'],
+    ],
+    // For documentation purposes only; foreign keys are not created in the
+    // database.
+
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}

@@ -1,0 +1,5 @@
+name: Test
+type: module
+description: configuration test.
+package: Custom
+core: 8.x

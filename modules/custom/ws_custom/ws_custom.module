@@ -1,0 +1,13 @@
+<?php 
+
+/**
+ * Implements hook_theme().
+ */
+function ws_custom_theme() {
+  return array(
+   'ws_custom_block' => array(
+            'variables' => array('title' => NULL, 'description' => NULL),
+            'template' => 'block--ws-custom',
+        ),
+  );
+}

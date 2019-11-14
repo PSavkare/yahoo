@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function devblock_theme() {
+  return array(
+   'devblock' => array(
+            'variables' => array('title' => NULL, 'body' => NULL),
+            'template' => 'devblock',
+        ),
+  );
+}

@@ -1,0 +1,22 @@
+csv.csv_pgdcbm_form_submission:
+  path: '/download/pgdcbm'
+  defaults:
+    _controller: '\Drupal\csv\Controller\CsvController::csv_pgdcbm_form_submission'
+    _title: 'csv'
+  requirements:
+    _permission: 'access content'
+csv.csv_dmco_form_submission:
+  path: '/download/dmco'
+  defaults:
+    _controller: '\Drupal\csv\Controller\CsvController::csv_dmco_form_submission'
+    _title: 'csv'
+  requirements:
+    _permission: 'access content'
+csv.csv_pgdm_form_submission:
+  path: '/download/pgdm'
+  defaults:
+    _controller: '\Drupal\csv\Controller\CsvController::csv_pgdm_form_submission'
+    _title: 'csv'
+  requirements:
+    _permission: 'access content'
+  

@@ -1,0 +1,7 @@
+custom_view.helloworld:
+  path: '/services'
+  defaults:
+    _controller: '\Drupal\custom_view\Controller\ServicesController:helloworld'
+    _title: 'Hello Service'
+  requirements:
+    _permission: 'access content'

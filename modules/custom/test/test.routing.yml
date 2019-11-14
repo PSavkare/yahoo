@@ -1,0 +1,7 @@
+test.test_function:
+  path: '/test'
+  defaults:
+    _controller: '\Drupal\test\Controller\TestController:test_function'
+    _title: 'Admin Test Content'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+name: 'Sendmail'
+type: module
+description: 'Send Mail Module is for sending mail to users '
+core: 8.x
+package: 'Custom'
