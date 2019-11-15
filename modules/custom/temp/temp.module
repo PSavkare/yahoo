@@ -1,0 +1,13 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function temp_theme() {
+  return [
+    'views_view_fields__temp__display_temp' => [
+      'template' => 'display-temp',
+      'base hook' => 'view'
+    ],
+  ];
+}
+?>

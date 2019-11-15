@@ -5,7 +5,7 @@
 function custom_view_theme() {
   return [
     'views_view_fields__custom_view__page_1' => [
-      'template' => 'views-view-fields--custom-view--page-1',
+      'template' => 'display-view',
       'base hook' => 'view'
     ],
   ];
